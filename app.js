@@ -17,6 +17,10 @@ const proxy = createProxyMiddleware(options)
 // mount `proxy` in web server
 app.use('/proxy', proxy)
 
+app.get('/', (req, res) => {
+  res.send('ok')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port http://127.0.0.1:${port}`)
 })
